@@ -1,0 +1,63 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out out/annot \
+--bfile data/plink/22 \
+--annot data/plink/22.annot \
+--ld-wind-snps 1 \
+--l2  
+
+Beginning analysis at Mon Apr 27 11:21:42 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read 2 annotations for 8 SNPs from data/plink/22.annot
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/annot.l2.ldscore.gz
+
+Summary of LD Scores in out/annot.l2.ldscore.gz
+         MAF         AL2     BL2
+mean  0.3875  7.0996e-01  1.4199
+std   0.0144  9.0649e-17  0.0000
+min   0.3750  7.0996e-01  1.4199
+25%   0.3750  7.0996e-01  1.4199
+50%   0.3875  7.0996e-01  1.4199
+75%   0.4000  7.0996e-01  1.4199
+max   0.4000  7.0996e-01  1.4199
+
+MAF/LD Score Correlation Matrix
+        MAF     AL2  BL2
+MAF  1.0000  0.7071  NaN
+AL2  0.7071  1.0000  NaN
+BL2     NaN     NaN  NaN
+
+LD Score Matrix Condition Number
+2.2609e+16
+WARNING: ill-conditioned LD Score Matrix!
+
+Annotation Correlation Matrix
+     A   B
+A  1.0 NaN
+B  NaN NaN
+
+Annotation Matrix Column Sums
+A    2
+B    4
+
+Summary of Annotation Matrix Row Sums
+count    4.0000
+mean     1.5000
+std      0.5774
+min      1.0000
+25%      1.0000
+50%      1.5000
+75%      2.0000
+max      2.0000
+Analysis finished at Mon Apr 27 11:21:42 2026
+Total time elapsed: 0.08s
