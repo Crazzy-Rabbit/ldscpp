@@ -1,3 +1,0 @@
-/mnt/f/Shi/AI_Rewrite/ldsc_cpp/build/CMakeFiles/ldsc.dir
-/mnt/f/Shi/AI_Rewrite/ldsc_cpp/build/CMakeFiles/edit_cache.dir
-/mnt/f/Shi/AI_Rewrite/ldsc_cpp/build/CMakeFiles/rebuild_cache.dir
