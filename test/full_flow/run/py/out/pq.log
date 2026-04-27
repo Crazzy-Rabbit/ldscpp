@@ -1,0 +1,57 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--pq-exp 1.0 \
+--out out/pq \
+--bfile data/plink/22 \
+--ld-wind-snps 1 \
+--l2  
+
+Beginning analysis at Mon Apr 27 11:21:45 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+Computing LD with pq ^ 1.0.
+Note that LD Scores with pq raised to a nonzero power arenot directly comparable to normal LD Scores.
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/pq.l2.ldscore.gz
+
+Summary of LD Scores in out/pq.l2.ldscore.gz
+         MAF  L2_S1.0
+mean  0.3875   0.3368
+std   0.0144   0.0084
+min   0.3750   0.3295
+25%   0.3750   0.3295
+50%   0.3875   0.3368
+75%   0.4000   0.3440
+max   0.4000   0.3440
+
+MAF/LD Score Correlation Matrix
+         MAF  L2_S1.0
+MAF      1.0      1.0
+L2_S1.0  1.0      1.0
+
+Annotation Correlation Matrix
+     0
+0  1.0
+
+Annotation Matrix Column Sums
+0    0.9487
+
+Summary of Annotation Matrix Row Sums
+count    4.0000
+mean     0.2372
+std      0.0032
+min      0.2344
+25%      0.2344
+50%      0.2372
+75%      0.2400
+max      0.2400
+Analysis finished at Mon Apr 27 11:21:45 2026
+Total time elapsed: 0.03s

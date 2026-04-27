@@ -1,0 +1,75 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--ref-ld-chr data/eur_w_ld_chr/ \
+--out out/rg_extra \
+--rg out/scz.sumstats.gz,out/bip.sumstats.gz \
+--n-blocks 10 \
+--print-cov  \
+--w-ld-chr data/eur_w_ld_chr/ \
+--print-delete-vals  
+
+Beginning analysis at Mon Apr 27 11:21:42 2026
+Reading summary statistics from out/scz.sumstats.gz ...
+Read summary statistics for 80 SNPs.
+Reading reference panel LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 80 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 80 SNPs.
+After merging with reference panel LD, 80 SNPs remain.
+After merging with regression SNP LD, 80 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from out/bip.sumstats.gz ...
+Read summary statistics for 80 SNPs.
+After merging with summary statistics, 80 SNPs remain.
+80 SNPs with valid alleles.
+WARNING: number of SNPs less than 200k; this is almost always bad.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0471 (0.0056)
+Lambda GC: 11.223
+Mean Chi^2: 4.9192
+Intercept: 0.7655 (0.4938)
+Ratio < 0 (usually indicates GC correction).
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0427 (0.0054)
+Lambda GC: 10.761
+Mean Chi^2: 4.8849
+Intercept: 1.1235 (0.4726)
+Ratio: 0.0318 (0.1216)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0449 (0.0049)
+Mean z1*z2: 4.8979
+Intercept: 0.941 (0.4342)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 1.0011 (0.0032)
+Z-score: 309.2655
+P: 0.
+
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.gencov.cov.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq1.delete.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq2.delete.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.gencov.delete.
+
+Summary of Genetic Correlation Results
+p1                   p2      rg      se         z    p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+out/scz.sumstats.gz  out/bip.sumstats.gz  1.0011  0.0032  309.2655  0.0  0.0427     0.0054  1.1235     0.4726     0.941       0.4342
+
+Analysis finished at Mon Apr 27 11:21:42 2026
+Total time elapsed: 0.19s

@@ -1,0 +1,42 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--signed-sumstats BETA,0 \
+--out out/noalleles \
+--sumstats data/noalleles.sumstats \
+--no-alleles  
+
+Interpreting column names as follows:
+P:	p-Value
+BETA:	Directional summary statistic as specified by --signed-sumstats.
+SNP:	Variant ID (e.g., rs number)
+N:	Sample size
+
+Reading sumstats from data/noalleles.sumstats into memory 5000000 SNPs at a time.
+Read 40 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+40 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (40 SNPs remain).
+Removed 0 SNPs with N < 600.0 (40 SNPs remain).
+Median value of SIGNED_SUMSTATS was 0.0, which seems sensible.
+Writing summary statistics for 40 SNPs (40 with nonmissing beta) to out/noalleles.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 0.957
+WARNING: mean chi^2 may be too small.
+Lambda GC = 2.111
+Max chi^2 = 1.124
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:39 2026
+Total time elapsed: 0.01s

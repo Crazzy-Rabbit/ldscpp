@@ -1,0 +1,69 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out out/cts \
+--bfile data/plink/22 \
+--cts-names C \
+--cts-breaks 0.25,0.55 \
+--cts-bin data/cts.txt \
+--ld-wind-snps 1 \
+--l2  
+
+Beginning analysis at Mon Apr 27 11:21:44 2026
+Read list of 8 SNPs from data/plink/22.bim
+Reading numbers with which to bin SNPs from data/cts.txt
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/cts.l2.ldscore.gz
+Writing annot matrix produced by --cts-bin to out/cts.l2.ldscore.gz
+
+Summary of LD Scores in out/cts.l2.ldscore.gz
+         MAF  C_min_0.25L2  C_0.25_0.55L2  C_0.55_maxL2
+mean  0.3875           0.0            0.0        1.4199
+std   0.0144           0.0            0.0        0.0000
+min   0.3750           0.0            0.0        1.4199
+25%   0.3750           0.0            0.0        1.4199
+50%   0.3875           0.0            0.0        1.4199
+75%   0.4000           0.0            0.0        1.4199
+max   0.4000           0.0            0.0        1.4199
+
+MAF/LD Score Correlation Matrix
+               MAF  C_min_0.25L2  C_0.25_0.55L2  C_0.55_maxL2
+MAF            1.0           NaN            NaN           NaN
+C_min_0.25L2   NaN           NaN            NaN           NaN
+C_0.25_0.55L2  NaN           NaN            NaN           NaN
+C_0.55_maxL2   NaN           NaN            NaN           NaN
+
+LD Score Matrix Condition Number
+inf
+WARNING: ill-conditioned LD Score Matrix!
+
+Annotation Correlation Matrix
+             C_min_0.25  C_0.25_0.55  C_0.55_max
+C_min_0.25          NaN          NaN         NaN
+C_0.25_0.55         NaN          NaN         NaN
+C_0.55_max          NaN          NaN         NaN
+
+Annotation Matrix Column Sums
+C_min_0.25     0
+C_0.25_0.55    0
+C_0.55_max     4
+
+Summary of Annotation Matrix Row Sums
+count    4.0
+mean     1.0
+std      0.0
+min      1.0
+25%      1.0
+50%      1.0
+75%      1.0
+max      1.0
+Analysis finished at Mon Apr 27 11:21:44 2026
+Total time elapsed: 0.05s
