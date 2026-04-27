@@ -1,0 +1,15 @@
+scope	command_index	py_median_s	cpp_median_s	speedup_x	time_reduction_pct	command
+total	all	10.680408	0.736739	14.497	93.1	full_flow
+command	1	0.856013	0.028792	29.731	96.6	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	10	0.754114	0.037470	20.126	95.0	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	11	0.760476	0.040312	18.865	94.7	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	12	0.725994	0.038230	18.990	94.7	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	13	0.734168	0.034254	21.433	95.3	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+command	2	0.911385	0.028516	31.960	96.9	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	3	0.861572	0.033688	25.575	96.1	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	4	0.910158	0.031576	28.824	96.5	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	5	0.877582	0.028747	30.528	96.7	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	6	0.874654	0.027923	31.324	96.8	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	7	0.820901	0.138680	5.919	83.1	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	8	0.839921	0.158282	5.306	81.2	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	9	0.763719	0.039591	19.290	94.8	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot

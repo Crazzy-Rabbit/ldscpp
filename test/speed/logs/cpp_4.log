@@ -1,0 +1,553 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/pgc.cross.SCZ17.2013-05.txt \
+--N 1000 \
+--out out/scz \
+--merge-alleles data/w_hm3.snplist
+
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+FRQ:	Allele frequency
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+OR:	Odds ratio (1 --> no effect; above 1 --> A1 is risk increasing)
+
+Reading list of SNPs for allele merge from data/w_hm3.snplist
+Read 80 SNPs for allele merge.
+Reading sumstats from data/pgc.cross.SCZ17.2013-05.txt into memory 5000000 SNPs at a time.
+Read 80 SNPs from --sumstats file.
+Removed 0 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+80 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (80 SNPs remain).
+Using N = 1000.0
+Median value of OR was 1.00045003, which seems sensible.
+Removed 0 SNPs whose alleles did not match --merge-alleles (80 SNPs remain).
+Writing summary statistics for 80 SNPs (80 with nonmissing beta) to out/scz.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 4.919
+Lambda GC = 11.227
+Max chi^2 = 6.819
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:34 2026
+Total time elapsed: 0.01s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/pgc.cross.BIP11.2013-05.txt \
+--N 1000 \
+--out out/bip \
+--merge-alleles data/w_hm3.snplist
+
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+FRQ:	Allele frequency
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+OR:	Odds ratio (1 --> no effect; above 1 --> A1 is risk increasing)
+
+Reading list of SNPs for allele merge from data/w_hm3.snplist
+Read 80 SNPs for allele merge.
+Reading sumstats from data/pgc.cross.BIP11.2013-05.txt into memory 5000000 SNPs at a time.
+Read 80 SNPs from --sumstats file.
+Removed 0 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+80 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (80 SNPs remain).
+Using N = 1000.0
+Median value of OR was 1.00045003, which seems sensible.
+Removed 0 SNPs whose alleles did not match --merge-alleles (80 SNPs remain).
+Writing summary statistics for 80 SNPs (80 with nonmissing beta) to out/bip.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 4.885
+Lambda GC = 10.759
+Max chi^2 = 6.662
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:34 2026
+Total time elapsed: 0.01s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/beta.sumstats \
+--out out/beta \
+--keep-maf  
+
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+BETA:	[linear/logistic] regression coefficient (0 --> no effect; above 0 --> A1 is trait/risk increasing)
+N:	Sample size
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+FRQ:	Allele frequency
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+
+Reading sumstats from data/beta.sumstats into memory 5000000 SNPs at a time.
+Read 60 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+60 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (60 SNPs remain).
+Removed 0 SNPs with N < 666.666666667 (60 SNPs remain).
+Median value of BETA was 0.0, which seems sensible.
+Writing summary statistics for 60 SNPs (60 with nonmissing beta) to out/beta.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.496
+Lambda GC = 3.299
+Max chi^2 = 1.822
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:34 2026
+Total time elapsed: 0.01s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/noalleles.sumstats \
+--out out/noalleles \
+--no-alleles  \
+--signed-sumstats BETA,0
+
+Interpreting column names as follows:
+P:	p-Value
+BETA:	Directional summary statistic as specified by --signed-sumstats.
+SNP:	Variant ID (e.g., rs number)
+N:	Sample size
+
+Reading sumstats from data/noalleles.sumstats into memory 5000000 SNPs at a time.
+Read 40 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+40 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (40 SNPs remain).
+Removed 0 SNPs with N < 600.0 (40 SNPs remain).
+Median value of SIGNED_SUMSTATS was 0.0, which seems sensible.
+Writing summary statistics for 40 SNPs (40 with nonmissing beta) to out/noalleles.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 0.957
+WARNING: mean chi^2 may be too small.
+Lambda GC = 2.111
+Max chi^2 = 1.124
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:34 2026
+Total time elapsed: 0.01s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/daner.sumstats \
+--out out/daner \
+--daner  
+
+Inferred that N_cas = 1234.0, N_con = 5468.0 from the FRQ_[A/U] columns.
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+FRQ_U_5468:	Allele frequency
+OR:	Odds ratio (1 --> no effect; above 1 --> A1 is risk increasing)
+
+Reading sumstats from data/daner.sumstats into memory 5000000 SNPs at a time.
+Read 9 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 4 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 1 variants that were not SNPs or were strand-ambiguous.
+4 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (4 SNPs remain).
+Median value of OR was 0.95534, which seems sensible.
+Writing summary statistics for 4 SNPs (4 with nonmissing beta) to out/daner.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 0.659
+WARNING: mean chi^2 may be too small.
+Lambda GC = 1.201
+Max chi^2 = 1.543
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:34 2026
+Total time elapsed: 0.01s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--h2 out/scz.sumstats.gz \
+--ref-ld-chr data/eur_w_ld_chr/ \
+--w-ld-chr data/eur_w_ld_chr/ \
+--out out/h2_extra \
+--print-cov  \
+--print-delete-vals  \
+--M 80 \
+--n-blocks 10 \
+--chisq-max 999.0
+
+Beginning analysis at Mon Apr 27 11:21:34 2026
+Reading summary statistics from out/scz.sumstats.gz ...
+Read summary statistics for 80 SNPs.
+Reading reference panel LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 80 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 80 SNPs.
+After merging with reference panel LD, 80 SNPs remain.
+After merging with regression SNP LD, 80 SNPs remain.
+WARNING: number of SNPs less than 200k; this is almost always bad.
+Removed 0 SNPs with chi^2 > 999.0 (80 SNPs remain)
+Using two-step estimator with cutoff at 30.
+Printing covariance matrix of the estimates to out/h2_extra.cov.
+Printing block jackknife delete values to out/h2_extra.delete.
+Printing partitioned block jackknife delete values to out/h2_extra.part_delete.
+Total Observed scale h2: 0.0471 (0.0056)
+Lambda GC: 11.223
+Mean Chi^2: 4.9192
+Intercept: 0.7655 (0.4938)
+Ratio < 0 (usually indicates GC correction).
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.13s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--rg out/scz.sumstats.gz,out/bip.sumstats.gz \
+--ref-ld-chr data/eur_w_ld_chr/ \
+--w-ld-chr data/eur_w_ld_chr/ \
+--out out/rg_extra \
+--print-cov  \
+--print-delete-vals  \
+--n-blocks 10
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Reading summary statistics from out/scz.sumstats.gz ...
+Read summary statistics for 80 SNPs.
+Reading reference panel LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 80 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from data/eur_w_ld_chr/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 80 SNPs.
+After merging with reference panel LD, 80 SNPs remain.
+After merging with regression SNP LD, 80 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from out/bip.sumstats.gz ...
+Read summary statistics for 80 SNPs.
+After merging with summary statistics, 80 SNPs remain.
+80 SNPs with valid alleles.
+WARNING: number of SNPs less than 200k; this is almost always bad.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0471 (0.0056)
+Lambda GC: 11.223
+Mean Chi^2: 4.9192
+Intercept: 0.7655 (0.4938)
+Ratio < 0 (usually indicates GC correction).
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.0427 (0.0054)
+Lambda GC: 10.761
+Mean Chi^2: 4.8849
+Intercept: 1.1235 (0.4726)
+Ratio: 0.0318 (0.1216)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: 0.0449 (0.0049)
+Mean z1*z2: 4.8979
+Intercept: 0.941 (0.4342)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: 1.0011 (0.0032)
+Z-score: 309.2655
+P: 0.
+
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq1.cov.
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq2.cov.
+Printing covariance matrix of the estimates to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.gencov.cov.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq1.delete.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.hsq2.delete.
+Printing block jackknife delete values to out/rg_extrascz.sumstats.gz_bip.sumstats.gz.gencov.delete.
+
+Summary of Genetic Correlation Results
+p1                   p2      rg      se         z    p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+out/scz.sumstats.gz  out/bip.sumstats.gz  1.0011  0.0032  309.2655  0.0  0.0427     0.0054  1.1235     0.4726     0.941       0.4342
+
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.14s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/annot \
+--annot data/plink/22.annot
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read 2 annotations for 8 SNPs from data/plink/22.annot
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+After filtering, 4 SNPs remain
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/annot.l2.ldscore.gz
+
+Summary of LD Scores in out/annot.l2.ldscore.gz
+         MAF     AL2     BL2
+mean  0.3875  0.7100  1.4199
+std   0.0144  0.0000  0.0000
+min   0.3750  0.7100  1.4199
+25%   0.3750  0.7100  1.4199
+50%   0.3875  0.7100  1.4199
+75%   0.4000  0.7100  1.4199
+max   0.4000  0.7100  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF AL2 BL2
+MAF  1.0 NaN NaN
+AL2  NaN NaN NaN
+BL2  NaN NaN NaN
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.03s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/thin \
+--annot data/plink/22.thin.annot \
+--thin-annot  
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read 2 annotations for 8 SNPs from data/plink/22.thin.annot
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+After filtering, 4 SNPs remain
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/thin.l2.ldscore.gz
+
+Summary of LD Scores in out/thin.l2.ldscore.gz
+         MAF     AL2     BL2
+mean  0.3875  0.7100  1.4199
+std   0.0144  0.0000  0.0000
+min   0.3750  0.7100  1.4199
+25%   0.3750  0.7100  1.4199
+50%   0.3875  0.7100  1.4199
+75%   0.4000  0.7100  1.4199
+max   0.4000  0.7100  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF AL2 BL2
+MAF  1.0 NaN NaN
+AL2  NaN NaN NaN
+BL2  NaN NaN NaN
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.03s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/cts \
+--cts-bin data/cts.txt \
+--cts-breaks 0.25,0.55 \
+--cts-names C
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Read list of 8 SNPs from data/plink/22.bim
+Reading numbers with which to bin SNPs from data/cts.txt
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+After filtering, 4 SNPs remain
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/cts.l2.ldscore.gz
+Writing annot matrix produced by --cts-bin to out/cts.l2.ldscore.gz
+
+Summary of LD Scores in out/cts.l2.ldscore.gz
+         MAF  C_min_0.25L2  C_0.25_0.55L2  C_0.55_maxL2
+mean  0.3875  0.0000  0.0000  1.4199
+std   0.0144  0.0000  0.0000  0.0000
+min   0.3750  0.0000  0.0000  1.4199
+25%   0.3750  0.0000  0.0000  1.4199
+50%   0.3875  0.0000  0.0000  1.4199
+75%   0.4000  0.0000  0.0000  1.4199
+max   0.4000  0.0000  0.0000  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF C_min_0.25L2 C_0.25_0.55L2 C_0.55_maxL2
+MAF  1.0 NaN NaN NaN
+C_min_0.25L2  NaN NaN NaN NaN
+C_0.25_0.55L2  NaN NaN NaN NaN
+C_0.55_maxL2  NaN NaN NaN NaN
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.03s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/print \
+--print-snps data/print_snps.txt.bz2
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+After filtering, 4 SNPs remain
+Estimating LD Score.
+Reading list of 3 SNPs for which to print LD Scores from data/print_snps.txt.bz2
+After merging with --print-snps, LD Scores for 3 SNPs will be printed.
+Writing LD Scores for 3 SNPs to out/print.l2.ldscore.gz
+
+Summary of LD Scores in out/print.l2.ldscore.gz
+         MAF      L2
+mean  0.3917  1.4199
+std   0.0144  0.0000
+min   0.3750  1.4199
+25%   0.3875  1.4199
+50%   0.4000  1.4199
+75%   0.4000  1.4199
+max   0.4000  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF  L2
+MAF  1.0 NaN
+L2   NaN NaN
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.02s
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/pq \
+--pq-exp 1.0
+
+Beginning analysis at Mon Apr 27 11:21:35 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+After filtering, 4 SNPs remain
+Computing LD with pq ^ 1.0.
+Note that LD Scores with pq raised to a nonzero power arenot directly comparable to normal LD Scores.
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/pq.l2.ldscore.gz
+
+Summary of LD Scores in out/pq.l2.ldscore.gz
+         MAF  L2_S1.0
+mean  0.3875  0.3368
+std   0.0144  0.0084
+min   0.3750  0.3295
+25%   0.3750  0.3295
+50%   0.3875  0.3368
+75%   0.4000  0.3440
+max   0.4000  0.3440
+
+MAF/LD Score Correlation Matrix
+     MAF L2_S1.0
+MAF  1.0 1.0
+L2_S1.0  1.0 1.0
+Analysis finished at Mon Apr 27 11:21:35 2026
+Total time elapsed: 0.03s

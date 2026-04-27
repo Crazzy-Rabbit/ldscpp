@@ -1,0 +1,48 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/pgc.cross.SCZ17.2013-05.txt \
+--N 1000 \
+--out out/scz \
+--merge-alleles data/w_hm3.snplist
+
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+FRQ:	Allele frequency
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+OR:	Odds ratio (1 --> no effect; above 1 --> A1 is risk increasing)
+
+Reading list of SNPs for allele merge from data/w_hm3.snplist
+Read 80 SNPs for allele merge.
+Reading sumstats from data/pgc.cross.SCZ17.2013-05.txt into memory 5000000 SNPs at a time.
+Read 80 SNPs from --sumstats file.
+Removed 0 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+80 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (80 SNPs remain).
+Using N = 1000.0
+Median value of OR was 1.00045003, which seems sensible.
+Removed 0 SNPs whose alleles did not match --merge-alleles (80 SNPs remain).
+Writing summary statistics for 80 SNPs (80 with nonmissing beta) to out/scz.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 4.919
+Lambda GC = 11.227
+Max chi^2 = 6.819
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:11:11 2026
+Total time elapsed: 0.01s

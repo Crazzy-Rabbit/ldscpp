@@ -1,0 +1,141 @@
+scope	side	iteration	command_index	seconds	command
+command	py	1	1	0.910729	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	py	1	2	0.923702	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	py	1	3	0.861572	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	py	1	4	0.855157	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	py	1	5	0.897264	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	py	1	6	0.800260	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	py	1	7	0.820901	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	py	1	8	0.839921	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	py	1	9	0.754638	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	py	1	10	0.687891	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	py	1	11	0.747804	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	py	1	12	0.727257	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	py	1	13	0.742252	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	py	1	all	10.628485	full_flow
+command	cpp	1	1	0.026506	../../../../build/ldsc --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	cpp	1	2	0.027649	../../../../build/ldsc --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	cpp	1	3	0.028712	../../../../build/ldsc --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	cpp	1	4	0.027557	../../../../build/ldsc --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	cpp	1	5	0.031121	../../../../build/ldsc --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	cpp	1	6	0.027516	../../../../build/ldsc --sumstats data/daner.sumstats --out out/daner --daner
+command	cpp	1	7	0.138680	../../../../build/ldsc --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	cpp	1	8	0.142263	../../../../build/ldsc --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	cpp	1	9	0.039140	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	cpp	1	10	0.039665	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	cpp	1	11	0.050082	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	cpp	1	12	0.034271	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	cpp	1	13	0.033469	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	cpp	1	all	0.711385	full_flow
+command	py	2	1	0.856013	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	py	2	2	0.938048	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	py	2	3	0.859526	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	py	2	4	0.883417	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	py	2	5	0.880547	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	py	2	6	0.934079	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	py	2	7	0.822391	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	py	2	8	0.836090	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	py	2	9	0.730325	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	py	2	10	0.709236	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	py	2	11	0.760476	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	py	2	12	0.758070	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	py	2	13	0.737647	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	py	2	all	10.765103	full_flow
+command	cpp	2	1	0.026024	../../../../build/ldsc --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	cpp	2	2	0.035065	../../../../build/ldsc --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	cpp	2	3	0.029406	../../../../build/ldsc --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	cpp	2	4	0.039719	../../../../build/ldsc --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	cpp	2	5	0.028747	../../../../build/ldsc --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	cpp	2	6	0.027923	../../../../build/ldsc --sumstats data/daner.sumstats --out out/daner --daner
+command	cpp	2	7	0.121325	../../../../build/ldsc --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	cpp	2	8	0.170593	../../../../build/ldsc --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	cpp	2	9	0.051754	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	cpp	2	10	0.037662	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	cpp	2	11	0.038690	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	cpp	2	12	0.038248	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	cpp	2	13	0.034254	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	cpp	2	all	0.736580	full_flow
+command	py	3	1	0.867901	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	py	3	2	0.893273	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	py	3	3	0.905386	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	py	3	4	0.910503	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	py	3	5	0.877582	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	py	3	6	0.874654	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	py	3	7	0.784422	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	py	3	8	1.221429	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	py	3	9	0.778745	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	py	3	10	0.844579	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	py	3	11	0.793585	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	py	3	12	0.724357	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	py	3	13	0.734168	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	py	3	all	11.272791	full_flow
+command	cpp	3	1	0.040095	../../../../build/ldsc --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	cpp	3	2	0.033223	../../../../build/ldsc --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	cpp	3	3	0.038583	../../../../build/ldsc --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	cpp	3	4	0.082618	../../../../build/ldsc --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	cpp	3	5	0.029251	../../../../build/ldsc --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	cpp	3	6	0.030276	../../../../build/ldsc --sumstats data/daner.sumstats --out out/daner --daner
+command	cpp	3	7	0.137753	../../../../build/ldsc --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	cpp	3	8	0.157929	../../../../build/ldsc --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	cpp	3	9	0.039591	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	cpp	3	10	0.036139	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	cpp	3	11	0.036891	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	cpp	3	12	0.044307	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	cpp	3	13	0.045388	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	cpp	3	all	0.833656	full_flow
+command	py	4	1	0.823111	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	py	4	2	0.911385	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	py	4	3	0.922537	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	py	4	4	0.968232	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	py	4	5	0.824079	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	py	4	6	0.881779	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	py	4	7	0.822156	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	py	4	8	0.833507	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	py	4	9	0.764008	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	py	4	10	0.754114	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	py	4	11	0.700095	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	py	4	12	0.685845	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	py	4	13	0.724929	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	py	4	all	10.680408	full_flow
+command	cpp	4	1	0.028792	../../../../build/ldsc --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	cpp	4	2	0.028516	../../../../build/ldsc --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	cpp	4	3	0.037276	../../../../build/ldsc --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	cpp	4	4	0.031576	../../../../build/ldsc --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	cpp	4	5	0.025763	../../../../build/ldsc --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	cpp	4	6	0.024945	../../../../build/ldsc --sumstats data/daner.sumstats --out out/daner --daner
+command	cpp	4	7	0.142516	../../../../build/ldsc --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	cpp	4	8	0.158282	../../../../build/ldsc --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	cpp	4	9	0.036573	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	cpp	4	10	0.035913	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	cpp	4	11	0.040312	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	cpp	4	12	0.035782	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	cpp	4	13	0.046929	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	cpp	4	all	0.736739	full_flow
+command	py	5	1	0.813025	./make_annot.py --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	py	5	2	0.872718	./munge_sumstats.py --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	py	5	3	0.841577	./munge_sumstats.py --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	py	5	4	0.910158	./munge_sumstats.py --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	py	5	5	0.839905	./munge_sumstats.py --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	py	5	6	0.869598	./munge_sumstats.py --sumstats data/daner.sumstats --out out/daner --daner
+command	py	5	7	0.757541	./ldsc.py --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	py	5	8	0.865982	./ldsc.py --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	py	5	9	0.763719	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	py	5	10	0.788247	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	py	5	11	0.762778	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	py	5	12	0.725994	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	py	5	13	0.707021	./ldsc.py --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	py	5	all	10.579154	full_flow
+command	cpp	5	1	0.033731	../../../../build/ldsc --bed-file data/regions.bed --bimfile data/plink/22.bim --annot-file out/make.annot
+command	cpp	5	2	0.028228	../../../../build/ldsc --sumstats data/pgc.cross.SCZ17.2013-05.txt --N 1000 --out out/scz --merge-alleles data/w_hm3.snplist
+command	cpp	5	3	0.033688	../../../../build/ldsc --sumstats data/pgc.cross.BIP11.2013-05.txt --N 1000 --out out/bip --merge-alleles data/w_hm3.snplist
+command	cpp	5	4	0.028127	../../../../build/ldsc --sumstats data/beta.sumstats --out out/beta --keep-maf
+command	cpp	5	5	0.028487	../../../../build/ldsc --sumstats data/noalleles.sumstats --out out/noalleles --no-alleles --signed-sumstats BETA,0
+command	cpp	5	6	0.032852	../../../../build/ldsc --sumstats data/daner.sumstats --out out/daner --daner
+command	cpp	5	7	0.141673	../../../../build/ldsc --h2 out/scz.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/h2_extra --print-cov --print-delete-vals --M 80 --n-blocks 10 --chisq-max 999.0
+command	cpp	5	8	0.159835	../../../../build/ldsc --rg out/scz.sumstats.gz,out/bip.sumstats.gz --ref-ld-chr data/eur_w_ld_chr/ --w-ld-chr data/eur_w_ld_chr/ --out out/rg_extra --print-cov --print-delete-vals --n-blocks 10
+command	cpp	5	9	0.045040	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/annot --annot data/plink/22.annot
+command	cpp	5	10	0.037470	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/thin --annot data/plink/22.thin.annot --thin-annot
+command	cpp	5	11	0.040313	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/cts --cts-bin data/cts.txt --cts-breaks 0.25,0.55 --cts-names C
+command	cpp	5	12	0.038230	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/print --print-snps data/print_snps.txt.bz2
+command	cpp	5	13	0.033734	../../../../build/ldsc --bfile data/plink/22 --l2 --ld-wind-snps 1 --out out/pq --pq-exp 1.0
+total	cpp	5	all	0.746834	full_flow
