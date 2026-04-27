@@ -1,0 +1,44 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/cts \
+--cts-bin data/cts.txt \
+--cts-breaks 0.25,0.55 \
+--cts-names C
+
+Beginning analysis at Mon Apr 27 11:21:46 2026
+Read list of 8 SNPs from data/plink/22.bim
+Reading numbers with which to bin SNPs from data/cts.txt
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+Estimating LD Score.
+Writing LD Scores for 4 SNPs to out/cts.l2.ldscore.gz
+Writing annot matrix produced by --cts-bin to out/cts.l2.ldscore.gz
+
+Summary of LD Scores in out/cts.l2.ldscore.gz
+         MAF  C_min_0.25L2  C_0.25_0.55L2  C_0.55_maxL2
+mean  0.3875  0.0000  0.0000  1.4199
+std   0.0144  0.0000  0.0000  0.0000
+min   0.3750  0.0000  0.0000  1.4199
+25%   0.3750  0.0000  0.0000  1.4199
+50%   0.3875  0.0000  0.0000  1.4199
+75%   0.4000  0.0000  0.0000  1.4199
+max   0.4000  0.0000  0.0000  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF C_min_0.25L2 C_0.25_0.55L2 C_0.55_maxL2
+MAF  1.0 NaN NaN NaN
+C_min_0.25L2  NaN NaN NaN NaN
+C_0.25_0.55L2  NaN NaN NaN NaN
+C_0.55_maxL2  NaN NaN NaN NaN
+Analysis finished at Mon Apr 27 11:21:46 2026
+Total time elapsed: 0.03s

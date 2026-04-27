@@ -1,0 +1,40 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--bfile data/plink/22 \
+--l2  \
+--ld-wind-snps 1 \
+--out out/print \
+--print-snps data/print_snps.txt.bz2
+
+Beginning analysis at Mon Apr 27 11:21:46 2026
+Read list of 8 SNPs from data/plink/22.bim
+Read list of 5 individuals from data/plink/22.fam
+Reading genotypes from data/plink/22.bed
+Estimating LD Score.
+Reading list of 3 SNPs for which to print LD Scores from data/print_snps.txt.bz2
+After merging with --print-snps, LD Scores for 3 SNPs will be printed.
+Writing LD Scores for 3 SNPs to out/print.l2.ldscore.gz
+
+Summary of LD Scores in out/print.l2.ldscore.gz
+         MAF      L2
+mean  0.3917  1.4199
+std   0.0144  0.0000
+min   0.3750  1.4199
+25%   0.3875  1.4199
+50%   0.4000  1.4199
+75%   0.4000  1.4199
+max   0.4000  1.4199
+
+MAF/LD Score Correlation Matrix
+     MAF  L2
+MAF  1.0 NaN
+L2   NaN NaN
+Analysis finished at Mon Apr 27 11:21:46 2026
+Total time elapsed: 0.03s

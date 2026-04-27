@@ -1,0 +1,44 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2026 Lulu Shi and GPT
+* West China Hospital of Sichuan University
+* GNU General Public License v3
+*********************************************************************
+Call: 
+../../../../build/ldsc \
+--sumstats data/daner.sumstats \
+--out out/daner \
+--daner  
+
+Inferred that N_cas = 1234.0, N_con = 5468.0 from the FRQ_[A/U] columns.
+Interpreting column names as follows:
+INFO:	INFO score (imputation quality; higher --> better imputation)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+P:	p-Value
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+SNP:	Variant ID (e.g., rs number)
+FRQ_U_5468:	Allele frequency
+OR:	Odds ratio (1 --> no effect; above 1 --> A1 is risk increasing)
+
+Reading sumstats from data/daner.sumstats into memory 5000000 SNPs at a time.
+Read 9 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 4 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 1 variants that were not SNPs or were strand-ambiguous.
+4 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (4 SNPs remain).
+Median value of OR was 0.95534, which seems sensible.
+Writing summary statistics for 4 SNPs (4 with nonmissing beta) to out/daner.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 0.659
+WARNING: mean chi^2 may be too small.
+Lambda GC = 1.201
+Max chi^2 = 1.543
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Mon Apr 27 11:21:46 2026
+Total time elapsed: 0.01s
